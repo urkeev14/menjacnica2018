@@ -64,28 +64,10 @@ public class MenjacnicaGUI extends JFrame {
 	private JMenuItem mntmAbout;
 
 	// klasa na logickom nivou
-	//protected Menjacnica sistem;
+	
 	private JTable table;
 
-	/**
-	 * Launch the application.
-	 */
-//	public static void main(String[] args) {
-//		EventQueue.invokeLater(new Runnable() {
-//			public void run() {
-//				try {
-//					MenjacnicaGUI frame = new MenjacnicaGUI();
-//					frame.setVisible(true);
-//				} catch (Exception e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//	}
-
-	/**
-	 * Create the frame.
-	 */
+	
 	public MenjacnicaGUI() {
 		addWindowListener(new WindowAdapter() {
 			@Override
@@ -105,7 +87,6 @@ public class MenjacnicaGUI extends JFrame {
 		contentPane.add(getScrollPane(), BorderLayout.CENTER);
 		contentPane.add(getPanel(), BorderLayout.EAST);
 
-//		sistem = new Menjacnica();
 	}
 
 	private JScrollPane getScrollPane() {
@@ -255,83 +236,35 @@ public class MenjacnicaGUI extends JFrame {
 
 	private void ugasiAplikaciju() {
 		GUIKontroler.ugasiAplikaciju(contentPane);
-//		int opcija = JOptionPane.showConfirmDialog(contentPane, "Da li ZAISTA zelite da izadjete iz apliacije",
-//				"Izlazak", JOptionPane.YES_NO_OPTION);
-//
-//		if (opcija == JOptionPane.YES_OPTION)
-//			System.exit(0);
 	}
 
 	private void prikaziAboutProzor() {
 		GUIKontroler.prikaziAboutProzor(contentPane);
-//		JOptionPane.showMessageDialog(contentPane, "Autor: Bojan Tomic, Verzija 1.0", "O programu Menjacnica",
-//				JOptionPane.INFORMATION_MESSAGE);
 	}
 
 	private void sacuvajUFajl() {
 		GUIKontroler.sacuvajUFajl(contentPane);
-//		try {
-//			JFileChooser fc = new JFileChooser();
-//			int returnVal = fc.showSaveDialog(contentPane);
-//
-//			if (returnVal == JFileChooser.APPROVE_OPTION) {
-//				File file = fc.getSelectedFile();
-//
-//				sistem.sacuvajUFajl(file.getAbsolutePath());
-//			}
-//		} catch (Exception e1) {
-//			JOptionPane.showMessageDialog(contentPane, e1.getMessage(), "Greska", JOptionPane.ERROR_MESSAGE);
-//		}
 	}
 
 	private void ucitajIzFajla() {
 		GUIKontroler.ucitajIzFajla(contentPane, table);
-//		try {
-//			JFileChooser fc = new JFileChooser();
-//			int returnVal = fc.showOpenDialog(contentPane);
-//
-//			if (returnVal == JFileChooser.APPROVE_OPTION) {
-//				File file = fc.getSelectedFile();
-//				sistem.ucitajIzFajla(file.getAbsolutePath());
-//				prikaziSveValute();
-//			}
-//		} catch (Exception e1) {
-//			JOptionPane.showMessageDialog(contentPane, e1.getMessage(), "Greska", JOptionPane.ERROR_MESSAGE);
-//		}
 	}
 
 	protected void prikaziSveValute() {
 		GUIKontroler.prikaziSveValute(table);
-//		MenjacnicaTableModel model = (MenjacnicaTableModel) (table.getModel());
-//		model.staviSveValuteUModel(sistem.vratiKursnuListu());
 
 	}
 
 	private void prikaziDodajKursGUI() {
 		GUIKontroler.prikaziDodajKursGUI(contentPane);
-//		DodajKursGUI prozor = new DodajKursGUI(this);
-//		prozor.setLocationRelativeTo(contentPane);
-//		prozor.setVisible(true);
 	}
 
 	private void prikaziObrisiKursGUI() {
 		GUIKontroler.prikaziObrisiKursGUI(table, contentPane);
-//		if (table.getSelectedRow() != -1) {
-//			MenjacnicaTableModel model = (MenjacnicaTableModel) (table.getModel());
-//			ObrisiKursGUI prozor = new ObrisiKursGUI(this, model.vratiValutu(table.getSelectedRow()));
-//			prozor.setLocationRelativeTo(contentPane);
-//			prozor.setVisible(true);
-//		}
 	}
 
 	private void prikaziIzvrsiZamenuGUI() {
 		GUIKontroler.prikaziIzvrsiZamenuGUI(table, contentPane);
-//		if (table.getSelectedRow() != -1) {
-//			MenjacnicaTableModel model = (MenjacnicaTableModel) (table.getModel());
-//			IzvrsiZamenuGUI prozor = new IzvrsiZamenuGUI(this, model.vratiValutu(table.getSelectedRow()));
-//			prozor.setLocationRelativeTo(contentPane);
-//			prozor.setVisible(true);
-//		}
 	}
 
 	private JTable getTable() {

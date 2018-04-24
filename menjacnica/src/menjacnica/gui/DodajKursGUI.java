@@ -40,7 +40,6 @@ public class DodajKursGUI extends JFrame {
 	private JButton btnDodaj;
 	private JButton btnOdus;
 
-//	private MenjacnicaGUI glavniProzor;
 	private JSpinner spinnerSifra;
 
 	/**
@@ -72,7 +71,6 @@ public class DodajKursGUI extends JFrame {
 		contentPane.add(getBtnOdus());
 		
 		//podesavanje
-//		this.glavniProzor = glavniProzor;
 				
 	}
 
