@@ -11,12 +11,13 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 
 import menjacnica.Menjacnica;
+import menjacnica.MenjacnicaInterface;
 import menjacnica.Valuta;
 import menjacnica.gui.models.MenjacnicaTableModel;
 
 public class GUIKontroler {
 	
-	public static Menjacnica sistem = new Menjacnica();
+	public static MenjacnicaInterface sistem = new Menjacnica();
 	public static MenjacnicaGUI glavniProzor;
 	
 	public static void main(String[] args) {

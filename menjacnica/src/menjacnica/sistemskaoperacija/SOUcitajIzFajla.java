@@ -9,15 +9,16 @@ import menjacnica.Valuta;
 
 public class SOUcitajIzFajla {
 	
-	public static void izvrsi(LinkedList<Valuta> kursnaLista, String putanja) {
+	public static LinkedList<Valuta> izvrsi(String putanja) {
 		
-		try{
-			ObjectInputStream in = new ObjectInputStream(
-					new BufferedInputStream(new FileInputStream(putanja)));
+		try(ObjectInputStream in = new ObjectInputStream(
+					new BufferedInputStream(new FileInputStream(putanja)))){
 			
-			kursnaLista = (LinkedList<Valuta>)(in.readObject());
 			
-			in.close();
+			return (LinkedList<Valuta>)(in.readObject());
+			
+			
+//			in.close();
 		}catch(Exception e){
 			throw new RuntimeException(e);
 		}
