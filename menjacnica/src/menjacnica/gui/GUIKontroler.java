@@ -17,7 +17,7 @@ import menjacnica.gui.models.MenjacnicaTableModel;
 
 public class GUIKontroler {
 	
-	public static MenjacnicaInterface sistem = new Menjacnica();
+	public static Menjacnica sistem = new Menjacnica();
 	public static MenjacnicaGUI glavniProzor;
 	
 	public static void main(String[] args) {
